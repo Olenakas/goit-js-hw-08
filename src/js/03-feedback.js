@@ -39,6 +39,6 @@ function handleSubmit(event) {
   form.reset();
 }
 
-const saveFormStateThrottled = require('lodash.throttle')(saveFormState, 500);
+const saveFormStateThrottled = throttle(saveFormState, 500);
 emailInput.addEventListener('input', saveFormStateThrottled);
 messageInput.addEventListener('input', saveFormStateThrottled);
